@@ -19,6 +19,8 @@ public class IterativeMethods {
 		}
 		return sum;
 	}
+	
+
 
 	/**
 	 * @param array the array to create a reverse of, not to be mutated
