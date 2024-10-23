@@ -1,5 +1,7 @@
 package studio6;
 
+import java.util.Arrays;
+
 import edu.princeton.cs.introcs.StdDraw;
 
 public class RecursiveMethods {
@@ -64,13 +66,16 @@ public class RecursiveMethods {
 	}
 	public static int[] toReversed(int[] array) {
 		
+		int[] CopyArray = Arrays.copyOf(array, array.length);
+		
+				
 		if (array.length ==0 || array.length ==1) {
-			return array;
+			return CopyArray;
 			
 		}
 		
 		
-		return reverseHelper(array,0, array.length-1);
+		return reverseHelper(CopyArray,0, array.length-1);
 		
 		
 	}
@@ -85,8 +90,13 @@ public class RecursiveMethods {
 	 */
 	public static int gcd(int p, int q) {
 		
-			// FIXME compute the gcd of p and q using recursion
-			return 0;
+if (q==0) {
+	
+	return p;
+	
+}
+return gcd(q,p%q);
+
 		
 	}
 
